@@ -2,6 +2,8 @@
 
 A message-entry-box for your chat application (similar to Whatsapp and Messages on iOS)
 
+![](messageBox.gif)
+
 ## Installation
 
 Copy MessageBox.swift to your project - Done!
@@ -12,8 +14,6 @@ Copy MessageBox.swift to your project - Done!
 ```
 let messageBox = MessageBox(leftButton, rightButton)
 ```
-
-![](messageBox.gif)
 
 ## License
 See [LICENSE](LICENSE)
