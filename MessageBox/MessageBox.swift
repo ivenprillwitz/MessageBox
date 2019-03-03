@@ -10,9 +10,19 @@ import UIKit
 
 class MessageBox: UIView {
     
+    fileprivate let seperatorView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        let color = UIColor(red: 174/255, green: 174/255, blue: 174/255, alpha: 1)
+        view.backgroundColor = color
+        return view
+    }()
+    
     fileprivate let containerView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
+        let color = UIColor(red: 247/255, green: 247/255, blue: 247/255, alpha: 1)
+        view.backgroundColor = color
         return view
     }()
     fileprivate let textView: UITextView = {
@@ -21,7 +31,8 @@ class MessageBox: UIView {
         textview.textContainer.heightTracksTextView = true
         textview.isScrollEnabled = false
         textview.layer.cornerRadius = 15
-        textview.layer.borderColor = UIColor.lightGray.cgColor
+        let color = UIColor(red: 174/255, green: 174/255, blue: 174/255, alpha: 1)
+        textview.layer.borderColor = color.cgColor
         textview.layer.borderWidth = 1
         textview.textContainerInset = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
         return textview
@@ -47,6 +58,13 @@ class MessageBox: UIView {
         containerView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
         containerView.topAnchor.constraint(equalTo: topAnchor).isActive = true
         containerView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        
+        //Border Top
+        addSubview(seperatorView)
+        seperatorView.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        seperatorView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
+        seperatorView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
+        seperatorView.heightAnchor.constraint(equalToConstant: 1).isActive = true
         
         //RightButton
         containerView.addSubview(rightButton)
