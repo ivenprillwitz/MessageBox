@@ -22,12 +22,12 @@ class ViewController: UIViewController {
         rightButton.imageView?.contentMode = .scaleAspectFit
         rightButton.setImage(rightButtonImage, for: .normal)
         
-        let messengerBox = MessageBox(leftButton, rightButton)
-        messengerBox.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(messengerBox)
-        messengerBox.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        messengerBox.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-        messengerBox.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        let messageBox = MessageBox(leftButton, rightButton)
+        messageBox.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(messageBox)
+        messageBox.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        messageBox.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        messageBox.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
     }
 }
 
